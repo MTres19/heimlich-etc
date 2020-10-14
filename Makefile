@@ -86,8 +86,8 @@ endif
 PROJECT = ch
 
 # Imported source files and paths
-CHIBIOS = ../../../../ChibiOS
-CHIBIOS_CONTRIB = $(CHIBIOS)/../ChibiOS-Contrib
+CHIBIOS = ./ChibiOS
+CHIBIOS_CONTRIB = ./ChibiOS-Contrib
 
 # Licensing files.
 include $(CHIBIOS)/os/license/license.mk
@@ -107,7 +107,7 @@ include $(CHIBIOS)/test/rt/rt_test.mk
 include $(CHIBIOS)/test/oslib/oslib_test.mk
 
 # Define linker script file here
-LDSCRIPT= $(STARTUPLD)/TM4C123xH6.ld
+LDSCRIPT= $(CHIBIOS_CONTRIB)/os/common/startup/ARMCMx/compilers/GCC/ld/TM4C123xH6.ld
 
 # C sources that can be compiled in ARM or THUMB mode depending on the global
 # setting.
@@ -168,7 +168,7 @@ CP   = $(TRGT)objcopy
 AS   = $(TRGT)gcc -x assembler-with-cpp
 AR   = $(TRGT)ar
 OD   = $(TRGT)objdump
-SZ   = $(TRGT)size
+SZ   = size
 HEX  = $(CP) -O ihex
 BIN  = $(CP) -O binary
 
