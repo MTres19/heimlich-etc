@@ -3,4 +3,5 @@
 	url = https://github.com/ChibiOS/ChibiOS
 [submodule "ChibiOS-Contrib"]
 	path = ChibiOS-Contrib
-	url = https://github.com/ChibiOS/ChibiOS-Contrib
+	url = https://github.com/MTres19/ChibiOS-Contrib
+	branch = MTres19/Tiva-CAN
